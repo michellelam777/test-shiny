@@ -4,6 +4,7 @@ library(shinydashboard)
 library(tidyverse)
 library(leaflet)
 library(shinycssloaders)
+library(markdown)
 
 
 # READ IN DATA ----

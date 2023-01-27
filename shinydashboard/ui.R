@@ -33,9 +33,12 @@ body <- dashboardBody(
             column(width = 6,
                    
                    box(width = NULL, # when inside a column() set width to null since it will default to column width
-                       
-                       "background info here"
-                       
+                       title = tagList(icon("water"), tags$strong("Monitoring Fish Creek Watershed")),
+                       includeMarkdown("text/intro.md"),
+                       tags$img(src = "map.jpeg",
+                                alt = "here is some alt text",
+                                style = "max-width: 100%;"),
+                       tags$h6(tags$em("Map Source:", tags$a(href = "http://www.fishcreekwatershed.org", "FCWO")), style = "text-align: center;")
                    ) # END left-box
                    
             ), # END left-column
@@ -48,7 +51,8 @@ body <- dashboardBody(
                      
                      box(width = NULL,
                          
-                         "DATA CITATION HERE"
+                         title = tagList(icon("pen"), tags$strong("Citation")),
+                         includeMarkdown("text/citation.md")
                          
                      ) # END box
                      
@@ -59,7 +63,8 @@ body <- dashboardBody(
                      
                      box(width = NULL,
                          
-                         "Disclaimer here"
+                         title = tagList(icon("hand"), tags$strong("Disclaimer")),
+                         includeMarkdown("text/disclaimer.md")
                          
                      ) # END box
                      
